@@ -1,1 +1,1 @@
-A rock paper scissors game built with Javascript and miscellaneous.
+A rock paper scissors game built with Javascript.
