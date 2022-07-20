@@ -1,3 +1,4 @@
+// Computes the computer's move
 function computerPlay() {
     let random_int = Math.floor(Math.random() * 3);
     let cpu_move = undefined;
@@ -16,7 +17,7 @@ function computerPlay() {
     }
     return cpu_move
 }
-
+// Computes the player move
 function playerMove() {
     let player_move = prompt("Choose rock paper or scissors").toLowerCase().trim();
 
@@ -26,12 +27,13 @@ function playerMove() {
 
     return player_move;
 }
-
+// Computes a round of play
 function playRound(playerSelection, computerSelection) {
     computerSelection = computerSelection.toLowerCase()
     let player_loss = "Player lost",
     player_won = "Player won";
     switch (playerSelection) {
+        // Comparisons with computer's move if player selection is rock
         case "rock":
             switch (computerSelection) {
                 case "rock":
@@ -45,6 +47,7 @@ function playRound(playerSelection, computerSelection) {
                     return player_won;
             }
             break;
+        // Comparisons with computer's move if player selection is paper
         case "paper":
             switch (computerSelection) {
                 case "rock":
@@ -58,6 +61,7 @@ function playRound(playerSelection, computerSelection) {
                     return player_loss;
             }
             break;
+        // Comparisons with computer's move if player selection is scissors
         case "scissors":
             switch (computerSelection) {
                 case "rock":
@@ -74,8 +78,10 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+// A game of five rounds
 function game() {
     let restart = undefined;
+    // a do while loop that keeps track of player and computer score after each round of play
     do {
         let player_score = 0,
             computer_score = 0;
