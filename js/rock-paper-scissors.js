@@ -21,7 +21,6 @@ function playerMove() {
     let player_move = prompt("Choose rock paper or scissors").toLowerCase().trim();
 
     while (!((player_move === "rock") || (player_move === "paper") || (player_move === "scissors"))) {
-        console.log(player_move)
         player_move = prompt("Invalid choice. Please choose rock paper or scissors before continuing!").toLowerCase().trim();
     }
 
